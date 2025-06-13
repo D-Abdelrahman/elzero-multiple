@@ -7,12 +7,209 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/elzero-multiple.css" />
+    <link rel="stylesheet" href="css/framework.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <l ink rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body></body>
+  <body>
+    <div class="page">
+      <nav>
+        <h1>Elzero</h1>
+        <ul>
+          <li class="selected">
+            <a href="index.html">
+              <i class="fa-solid fa-chart-line"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="settings.html"
+              ><i class="fa-solid fa-gear"></i><span> Settings</span></a
+            >
+          </li>
+          <li>
+            <a href="#profile"
+              ><i class="fa-regular fa-user"></i><span> Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="#projects"
+              ><i class="fa-solid fa-diagram-project"></i
+              ><span> Projects</span></a
+            >
+          </li>
+          <li>
+            <a href="#courses"
+              ><i class="fa-solid fa-graduation-cap"></i>
+              <span> Courses</span></a
+            >
+          </li>
+          <li>
+            <a href="#friends"
+              ><i class="fa-regular fa-circle-user"></i><span> Friends</span></a
+            >
+          </li>
+          <li>
+            <a href="#files">
+              <i class="fa-regular fa-file"></i>
+              <span> Files </span>
+            </a>
+          </li>
+          <li>
+            <a href="#plans">
+              <i class="fa-regular fa-credit-card"></i>
+              <span> Plans </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <header>
+          <form action="">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" name="search" placeholder="Type A Keyword" />
+          </form>
+          <div class="user">
+            <i class="fa-regular fa-bell"></i>
+            <img src="imgs/avatar.png" alt="user-avatar" />
+          </div>
+        </header>
+        <h2>Dashboard</h2>
+        <div class="content dashboard">
+          <section class="welcome">
+            <header>
+              <div class="text">
+                <h3>Welcome</h3>
+                <span>Elzero</span>
+              </div>
+              <img class="person" src="imgs/welcome.png" alt="" />
+              <img class="avatar" src="imgs/avatar.png" alt="user-avatar" />
+            </header>
+            <div class="info">
+              <div>
+                <p>Osama Elzero</p>
+                <span>Developer</span>
+              </div>
+              <div>
+                <p>80</p>
+                <span>Projects</span>
+              </div>
+              <div>
+                <p>$8500</p>
+                <span>Earned</span>
+              </div>
+            </div>
+            <a href="profile.html">Profile</a>
+          </section>
+          <section class="draft">
+            <h3>Quick Draft</h3>
+            <span>Write A Draft For Your Ideas</span>
+            <form action="">
+              <input type="text" name="title" placeholder="Title" />
+              <textarea name="draft" placeholder="Your Thought"></textarea>
+              <input type="submit" value="Save" />
+            </form>
+          </section>
+          <section class="targets">
+            <h3>Yearly Targets</h3>
+            <span>Targets Of The Year</span>
+            <div class="item money">
+              <i class="fa-solid fa-dollar-sign"></i>
+              <div class="info">
+                <span>Money</span>
+                <strong>$20.000</strong>
+                <div class="holder">
+                  <span style="width: 80%" percentage="80%"></span>
+                </div>
+              </div>
+            </div>
+            <div class="item projects">
+              <i class="fa-solid fa-code"></i>
+              <div class="info">
+                <span>Projects</span>
+                <strong>24</strong>
+                <div class="holder">
+                  <span style="width: 55%" percentage="55%"></span>
+                </div>
+              </div>
+            </div>
+            <div class="item team">
+              <i class="fa-solid fa-user"></i>
+              <div class="info">
+                <span>team</span>
+                <strong>12</strong>
+                <div class="holder">
+                  <span style="width: 75%" percentage="75%"></span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="statistics">
+            <h3>Tickets Statistics</h3>
+            <span>Everything About Support Tickets</span>
+            <div class="info">
+              <div class="box">
+                <i class="fa-regular fa-rectangle-list total"></i>
+                <strong>2500</strong>
+                <span>Total</span>
+              </div>
+              <div class="box">
+                <i class="fa-solid fa-spinner pending"></i> <strong>500</strong>
+                <span>Pending</span>
+              </div>
+              <div class="box">
+                <i class="fa-regular fa-circle-check closed"></i>
+                <strong>1900</strong>
+                <span>Closed</span>
+              </div>
+              <div class="box">
+                <i class="fa-solid fa-square-xmark deleted"></i>
+                <strong>100</strong>
+                <span>Deleted</span>
+              </div>
+            </div>
+          </section>
+          <section class="news">
+            <h3>Latest News</h3>
+            <div class="box">
+              <img src="imgs/news-01.png" alt="" />
+              <div class="text">
+                <h4>Created SASS Section</h4>
+                <p>New SASS Examples & Tutorials</p>
+              </div>
+              <span>3 Days Ago</span>
+            </div>
+            <div class="box">
+              <img src="imgs/news-02.png" alt="" />
+              <div class="text">
+                <h4>Changed The Design</h4>
+                <p>A Brand New Website Design</p>
+              </div>
+              <span>5 Days Ago</span>
+            </div>
+            <div class="box">
+              <img src="imgs/news-03.png" alt="" />
+              <div class="text">
+                <h4>Team Increased</h4>
+                <p>3 Developers Joined The Team</p>
+              </div>
+              <span>7 Days Ago</span>
+            </div>
+            <div class="box">
+              <img src="imgs/news-04.png" alt="" />
+              <div class="text">
+                <h4>Added Payment Gateway</h4>
+                <p>Many New Payment Gateways Added</p>
+              </div>
+              <span>9 Days Ago</span>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
 </html>
