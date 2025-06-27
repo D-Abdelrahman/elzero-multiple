@@ -282,7 +282,7 @@ textarea {
   height: 25px;
   line-height: 25px;
   text-align: center;
-  right: calc(100% - 1*(25px + 4px));
+  right: calc(100% - 1 * (25px + 4px));
   border-radius: 50%;
   background-color: #fff;
   color: #ccc;
@@ -297,11 +297,8 @@ textarea {
 .page main .check-item.active:hover::before {
   content: "\f00d";
   color: #ccc;
-  right: calc(100% - 1*(25px + 4px));
+  right: calc(100% - 1 * (25px + 4px));
 }
-
-
-
 
 /* /////////////////////////////// */
 /* /////////////////////////////// */
@@ -1341,7 +1338,7 @@ textarea {
 .page main .profile .profile-info .info-box .box .check-item::before {
   width: 12px;
   height: 12px;
-  right: calc(100% - 1*(12px + 4px));
+  right: calc(100% - 1 * (12px + 4px));
   font-size: 8px;
   line-height: 12px;
 }
@@ -1349,8 +1346,14 @@ textarea {
 .page main .profile .profile-info .info-box .box .check-item.active::before {
   right: 4px;
 }
-.page main .profile .profile-info .info-box .box .check-item.active:hover::before {
-  right: calc(100% - 1*(12px + 4px));
+.page
+  main
+  .profile
+  .profile-info
+  .info-box
+  .box
+  .check-item.active:hover::before {
+  right: calc(100% - 1 * (12px + 4px));
 }
 /* /////////////////////////////// */
 /* Skills */
@@ -1360,12 +1363,29 @@ textarea {
   grid-row-start: 2;
   width: calc((100% / 3) - 10px);
 }
-.page main .profile .skills .line:not(:last-child) {
+@media (max-width: 767px) {
+  .page main .profile .skills {
+    width: 100%;
+  }
+}
+.page main .profile .skills .line {
   border-bottom: 1px solid #eee;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  padding: 15px 0;
+}
+@media (max-width: 767px) {
+  .page main .profile .skills .line {
+    justify-content: center;
+  }
+}
+.page main .profile .skills .line:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 .page main .profile .skills .line span {
   display: inline-block;
-  margin: 15px 0;
   background-color: #eee;
   border-radius: 6px;
   padding: 5px 10px;
@@ -1384,14 +1404,26 @@ textarea {
   grid-column: 1 / -1;
   grid-row-start: 2;
   justify-self: end;
-  width: calc((100% * (2/3)) - 10px);
+  width: calc((100% * (2 / 3)) - 10px);
+}
+@media (max-width: 767px) {
+  .page main .profile .activities {
+    grid-row-start: auto;
+    width: 100%;
+  }
 }
 .page main .profile .activities .box {
   display: flex;
   align-items: center;
   padding: 20px 0;
-  gap:  15px;
+  gap: 15px;
   border-bottom: 1px solid #eee;
+}
+@media (max-width: 767px) {
+  .page main .profile .activities .box {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 .page main .profile .activities .box:last-child {
   padding-bottom: 0;
@@ -1400,17 +1432,32 @@ textarea {
 .page main .profile .activities .box img {
   width: 60px;
 }
-.page main .profile .activities .box .text {
-  flex: 1;
-}
-.page main .profile .activities .box .text h4 {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
+.page main .profile .activities .box h4 {
   font-weight: 400;
 }
-.page main .profile .activities .box .text p {
-  display: flex;
-  justify-content: space-between;
+.page main .profile .activities .box p {
   color: #888;
+  margin-top: 10px;
+}
+.page main .profile .activities .box .date {
+  margin-left: auto;
+}
+@media (max-width: 767px) {
+  .page main .profile .activities .box .date {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+}
+.page main .profile .activities .box .date > * {
+  display: block;
+  text-align: right;
+}
+@media (max-width: 767px) {
+  .page main .profile .activities .box .date > * {
+    text-align: center;
+  }
+}
+.page main .profile .activities .box .date .day {
+  color: #888;
+  margin-top: 10px;
 }
