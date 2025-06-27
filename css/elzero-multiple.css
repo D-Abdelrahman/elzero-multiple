@@ -920,23 +920,15 @@ textarea {
 .page main .dashboard section.projects .table tr:hover td {
   background-color: #faf7f7;
 }
-.page main .dashboard section.projects .table td .imgs {
+.page main .dashboard section.projects .table .imgs {
   display: flex;
-  position: relative;
 }
 .page main .dashboard section.projects .table img {
   width: 30px;
   border-radius: 50%;
   border: 2px solid #fff;
   position: relative;
-}
-.page main .dashboard section.projects .table img:nth-child(2) {
-  transform: translateX(50%);
-  position: absolute;
-}
-.page main .dashboard section.projects .table img:nth-child(4) {
-  transform: translateX(150%);
-  position: absolute;
+  margin-right: -15px;
 }
 .page main .dashboard section.projects .table tbody td:last-child span {
   padding: 5px 10px;
@@ -1460,4 +1452,115 @@ textarea {
 .page main .profile .activities .box .date .day {
   color: #888;
   margin-top: 10px;
+}
+/* /////////////////////////////// */
+/* /////////////////////////////// */
+/* projects */
+/* /////////////////////////////// */
+/* /////////////////////////////// */
+.page main .projects section {
+  position: relative;
+}
+.page main .projects section::before {
+  content: "15/10/2022";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 13px;
+  color: #888;
+}
+.page main .projects section.elzero-dash::before {
+  content: "15/10/2021";
+}
+.page main .projects section h3 {
+  font-weight: normal;
+  font-size: 1rem;
+}
+.page main .projects section p {
+  font-size: 14px;
+}
+.page main .projects section .imgs {
+  display: flex;
+  margin-top: 50px;
+}
+.page main .projects section .imgs img {
+  position: relative;
+  border: 2px solid #fff;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 30px;
+  border-radius: 50%;
+  margin-left: -10px;
+}
+
+.page main .projects section .imgs img:hover {
+  z-index: 1;
+}
+.page main .projects section .srv {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  text-align: right;
+  margin-bottom: 20px;
+}
+.page main .projects section .srv span {
+  background-color: #eee;
+  padding: 5px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-left: 1px;
+}
+@media (max-width: 767px) {
+  .page main .projects section .srv span {
+    display: block;
+    width: fit-content;
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+    .page main .projects section .srv span:last-child {
+      margin-bottom: 0;
+    }
+}
+.page main .projects section .price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .page main .projects section .price {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+.page main .projects section .price .holder {
+  background-color: #eee;
+  width: 250px;
+  height: 8px;
+  border-radius: 9999px;
+}
+.page main .projects section .price .holder span {
+  height: 100%;
+  border-radius: 9999px;
+  background-color: var(--green);
+  display: block;
+}
+.page main .projects section.elzero-dash .price .holder span,
+.page main .projects section.mohamed-app .price .holder span {
+  background-color: var(--red);
+}
+.page main .projects section.chatting-app .price .holder span {
+  background-color: var(--main-color);
+}
+.page main .projects section .price > span {
+  color: #888;
+  position: relative;
+  font-size: 14px;
+}
+.page main .projects section .price > span::before {
+  content: "\24";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  font-size: 14px;
+  left: -13px;
 }
