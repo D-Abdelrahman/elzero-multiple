@@ -16,6 +16,7 @@
   --green: #22c55e;
   --green-trans: #22c55e33;
   --red: #f44336;
+  --red-trans: #f4433633;
 }
 ::-webkit-scrollbar {
   width: 15px;
@@ -228,8 +229,9 @@ textarea {
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 20px;
 }
+
 @media (max-width: 767px) {
-  .page main .content {
+  .page main > .content {
     grid-template-columns: 1fr;
     padding: 0 10px 10px;
     gap: 10px;
@@ -1501,7 +1503,7 @@ textarea {
   border-bottom: 1px solid #eee;
   padding: 15px 0;
   text-align: right;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .page main .projects section .srv span {
   background-color: #eee;
@@ -1517,9 +1519,9 @@ textarea {
     margin-left: 0;
     margin-bottom: 15px;
   }
-    .page main .projects section .srv span:last-child {
-      margin-bottom: 0;
-    }
+  .page main .projects section .srv span:last-child {
+    margin-bottom: 0;
+  }
 }
 .page main .projects section .price {
   display: flex;
@@ -1563,4 +1565,416 @@ textarea {
   position: absolute;
   font-size: 14px;
   left: -13px;
+}
+/* /////////////////////////////// */
+/* /////////////////////////////// */
+/* Courses */
+/* /////////////////////////////// */
+/* /////////////////////////////// */
+.page main > .courses {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+@media (max-width: 767px) {
+  .page main > .courses {
+    grid-template-columns: 1fr;
+  }
+}
+.page main > .courses section {
+  position: relative;
+  padding: 0;
+}
+.page main > .courses img:first-child {
+  width: 100%;
+}
+.page main > .courses img[alt="teacher"] {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border: 2px solid #fff;
+  width: 70px;
+  border-radius: 50%;
+}
+.page main > .courses .text {
+  padding: 20px;
+}
+.page main > .courses .text h3 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+.page main > .courses .text p {
+  color: #888;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.page main > .courses .info {
+  border-top: 1px solid #eee;
+  position: relative;
+  font-size: 13px;
+  margin-top: 20px;
+}
+.page main > .courses .info > span {
+  position: absolute;
+  padding: 5px 10px;
+  background-color: var(--main-color);
+  color: #fff;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+}
+.page main > .courses .info .text {
+  display: flex;
+  justify-content: space-between;
+  color: #888;
+}
+.page main > .courses .info .text span::before {
+  font-family: "font Awesome 6 Free";
+  font-weight: 900;
+  position: relative;
+  margin-right: 5px;
+}
+.page main > .courses .info .text span.user-num::before {
+  content: "\f007";
+  font-weight: 400;
+}
+.page main > .courses .info .text span.price::before {
+  content: "\24";
+}
+/* /////////////////////////////// */
+/* /////////////////////////////// */
+/* Friends */
+/* /////////////////////////////// */
+/* /////////////////////////////// */
+.page main > .friends {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+@media (max-width: 767px) {
+  .page main > .friends {
+    grid-template-columns: 1fr;
+  }
+}
+.page main > .friends section {
+  position: relative;
+}
+.page main > .friends section .contact {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.page main > .friends section .contact i {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background-color: #eee;
+  color: #888;
+  font-size: 13px;
+  transition: var(--main-transition);
+  border-radius: 50%;
+}
+.page main > .friends section .contact i:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+.page main > .friends section header {
+  text-align: center;
+}
+.page main > .friends section img {
+  width: 100px;
+  height: 100px;
+  margin: 15px 0;
+  border-radius: 50%;
+}
+.page main > .friends section h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.page main > .friends section p {
+  color: #888;
+  text-align: center;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+.page main > .friends section .main {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+  position: relative;
+  font-size: 14px;
+}
+.page main > .friends section.vip .main::before {
+  content: "Vip";
+  position: absolute;
+  color: var(--orange-trans);
+  font-size: 40px;
+  font-weight: bold;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.page main > .friends section .main span:not(:last-child) {
+  display: block;
+  margin-bottom: 20px;
+}
+.page main > .friends section .main span i {
+  margin-right: 5px;
+}
+.page main > .friends section .footer {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: #888;
+}
+.page main > .friends section .footer a {
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: #fff;
+  display: inline-block;
+}
+.page main > .friends section .footer a[href="profile.html"] {
+  background-color: var(--main-color);
+  margin-left: auto;
+}
+.page main > .friends section .footer a.remove {
+  background-color: var(--red);
+  margin-left: 4px;
+}
+/* /////////////////////////////// */
+/* /////////////////////////////// */
+/* Files */
+/* /////////////////////////////// */
+/* /////////////////////////////// */
+.page main .content.files {
+  grid-template-columns: 1fr 250px;
+}
+@media (max-width: 767px) {
+  .page main .content.files {
+    grid-template-columns: 1fr;
+    
+  }
+}
+.page main .content.files .files-holder {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .page main .content.files .files-holder {
+    grid-row: 2;
+    gap: 10px;
+  }
+}
+.page main .content.files .files-holder section {
+  padding: 10px;
+  position: relative;
+  font-size: 13px;
+  color: #888;
+}
+.page main .content.files .files-holder section::before {
+  content: "\f019";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #888;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 16px;
+}
+.page main .content.files .files-holder section .main {
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+.page main .content.files .files-holder section .main img {
+  width: 70px;
+  margin: 20px 0;
+  transition: var(--main-transition);
+}
+.page main .content.files .files-holder section:hover .main img {
+  transform: rotate(6deg);
+}
+.page main .content.files .files-holder section .main span {
+  display: block;
+  color: initial;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.page main .content.files .files-holder section .main .user {
+  text-align: left;
+  margin-bottom: 10px;
+}
+.page main .content.files .files-holder section .info {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.page main .content.files .stats {
+  align-self: start;
+}
+.page main .content.files .stats .box {
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  color: #888;
+}
+.page main .content.files .stats .box i {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  text-align: center;
+  background-color: var(--main-color-trans);
+  color: var(--main-color);
+}
+.page main .content.files .stats .box i.img {
+  background-color: var(--green-trans);
+  color: var(--green);
+
+}
+.page main .content.files .stats .box i.word {
+  background-color: var(--red-trans);
+  color: var(--red);
+
+}
+.page main .content.files .stats .box i.csv {
+  background-color: var(--orange-trans);
+  color: var(--orange);
+}
+.page main .content.files .stats .box .text {
+  margin-left: 8px;
+}
+.page main .content.files .stats .box .text h4 {
+  color: initial;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+.page main .content.files .stats .box .storage {
+  margin-left: auto;
+}
+.page main .content.files .stats .content > a {
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 6px;
+  display: block;
+  width: fit-content;
+  padding: 10px 15px;
+  margin : 0 auto;
+  font-size: 13px;
+  transition: var(--main-transition);
+
+}
+.page main .content.files .stats .content > a:hover {
+  background-color: var(--alt-color);
+}
+.page main .content.files .stats .content > a i {
+  transition: var(--main-transition);
+  margin-right: 10px;
+  transform: translateY();
+}
+.page main .content.files .stats .content > a:hover i {
+  animation: top-bottom 0.8s infinite;
+}
+@keyframes top-bottom {
+  0%,100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+
+  }
+}
+/* /////////////////////////////// */
+/* /////////////////////////////// */
+/* Plans */
+/* /////////////////////////////// */
+/* /////////////////////////////// */
+.page main .content.plans section.free {
+  --plan-color: var(--green);
+}
+.page main .content.plans section.basic {
+  --plan-color: var(--main-color);
+}
+.page main .content.plans section.premium {
+  --plan-color: var(--orange);
+}
+.page main .content.plans section:not(.used)::after {
+  content: "join";
+  background-color: var(--plan-color);
+  color: #fff;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 7px 12px;
+  border-radius: 6px;
+}
+.page main .content.plans section.used::after {
+  content: "This Is Your Current Plan";
+  color: #888;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+
+}
+.page main .content.plans section header {
+  background-color: var(--plan-color);
+  color: #fff;
+  box-shadow: 0 0 0 3px #fff,0 0 0 6px var(--plan-color);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.page main .content.plans section header h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+.page main .content.plans section header .price {
+  font-size: 40px;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+
+.page main .content.plans section header span {
+  font-size: 25px;
+  position: absolute;
+  top: -px;
+  left: -20px;
+}
+.page main .content.plans section ul li {
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+.page main .content.plans section ul li::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: var(--green);
+  margin-right: 8px;
+  font-size: 18px;
+}
+.page main .content.plans section ul li.access::before {
+  content: "\f00c";
+  color: var(--green);
+}
+.page main .content.plans section ul li:not(.access)::before {
+  content: "\f00d";
+  color: var(--red);
+}
+.page main .content.plans section ul li i {
+  color: #fff;
+  background-color: #888;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  text-align: center;
+  border-radius: 50%;
+  margin-left: auto;
+  display: inline-block;
+  font-size: 8px;
 }
